@@ -8,5 +8,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "postcss-calc": "^8.2.4",
+    "postcss-cli": "^9.1.0",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-each": "^1.1.0",
+    "postcss-nested": "^5.0.6"
+  }
 }
