@@ -4,18 +4,21 @@
   "description": "![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postcss:watch": "postcss styles/global.css --dir public --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "cssnano": "^5.1.1",
     "postcss": "^8.4.8",
     "postcss-calc": "^8.2.4",
     "postcss-cli": "^9.1.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-each": "^1.1.0",
-    "postcss-nested": "^5.0.6"
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.4.2"
   }
 }

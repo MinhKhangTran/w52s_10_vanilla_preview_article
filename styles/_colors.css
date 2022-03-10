@@ -1,0 +1,17 @@
+/* colors */
+.bg-background {
+  background-color: var(--background);
+}
+.bg-share-bg {
+  background-color: var(--share-bg);
+}
+.bg-very-dark-grayish-blue {
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.text-white {
+  color: white;
+}
+.text-very-dark-grayish-blue {
+  color: var(--very-dark-grayish-blue);
+}

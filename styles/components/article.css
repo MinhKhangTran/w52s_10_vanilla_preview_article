@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 730px;
+}
+.left__panel img {
+  height: 100%;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @media (--sm) {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+}
+.right__panel {
+  padding: 2.25rem 2rem 1.25rem 2rem;
+  @media (--sm) {
+    padding: 2rem 2.5rem 1.75rem 2.5rem;
+  }
+}
+.right__panel--text {
+  padding-block: 0.75rem 1.75rem;
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & img {
+    border-radius: 90px;
+  }
+
+  & button {
+    background-color: var(--share-bg);
+    border: none;
+    border-radius: 90px;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+}
