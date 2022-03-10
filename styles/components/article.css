@@ -6,8 +6,10 @@
   border-radius: 10px;
   width: 90%;
   max-width: 730px;
+  overflow: hidden;
   @media (--sm) {
     flex-direction: row;
+    overflow: visible;
   }
 }
 .left__panel {
@@ -59,23 +61,48 @@
 
 .tooltip {
   position: absolute;
-
+  bottom: 0;
   display: flex;
   visibility: hidden;
+  transform: translateY(200%);
+  opacity: 0;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--very-dark-grayish-blue);
+  width: 100%;
+  padding-inline: 2rem;
+  padding-block: 1rem 1.5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 0.35s ease-in-out;
   @media (--sm) {
-    background-color: var(--very-dark-grayish-blue);
     width: 248px;
     padding-block: 1.125rem;
     padding-inline: 2.25rem;
     border-radius: 10px;
     bottom: 35%;
     right: -10%;
+    transform: translateY(0%);
   }
   &__share {
     letter-spacing: 0.4em;
     font-size: 0.8125rem;
+  }
+  &__button {
+    display: inline;
+    background-color: var(--desaturated-dark-blue);
+    border: none;
+    border-radius: 90px;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+
+    @media (--sm) {
+      display: none;
+    }
+    svg path {
+      fill: #fff;
+    }
   }
   &__socials {
     display: flex;
@@ -88,17 +115,21 @@
     }
   }
 }
-.tooltip::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  aspect-ratio: 1;
-  background-color: var(--very-dark-grayish-blue);
-  bottom: 0;
-  right: 50%;
-  transform: rotate(45deg) translate(50%, 20%);
+@media (--sm) {
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: var(--very-dark-grayish-blue);
+    bottom: 0;
+    right: 50%;
+    transform: rotate(45deg) translate(50%, 20%);
+  }
 }
 
 .tooltip.active {
   visibility: visible;
+  transform: translateY(0%);
+  opacity: 1;
 }
