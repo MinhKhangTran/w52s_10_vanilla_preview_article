@@ -6,15 +6,26 @@
   border-radius: 10px;
   width: 90%;
   max-width: 730px;
+  @media (--sm) {
+    flex-direction: row;
+  }
+}
+.left__panel {
+  @media (--sm) {
+    width: 100%;
+  }
 }
 .left__panel img {
   height: 100%;
   background-size: cover;
+  width: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   @media (--sm) {
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    width: 100%;
   }
 }
 .right__panel {
