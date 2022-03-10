@@ -59,5 +59,46 @@
 
 .tooltip {
   position: absolute;
-  display: none;
+
+  display: flex;
+  visibility: hidden;
+  justify-content: space-between;
+  align-items: center;
+  @media (--sm) {
+    background-color: var(--very-dark-grayish-blue);
+    width: 248px;
+    padding-block: 1.125rem;
+    padding-inline: 2.25rem;
+    border-radius: 10px;
+    bottom: 35%;
+    right: -10%;
+  }
+  &__share {
+    letter-spacing: 0.4em;
+    font-size: 0.8125rem;
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    & a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: var(--very-dark-grayish-blue);
+  bottom: 0;
+  right: 50%;
+  transform: rotate(45deg) translate(50%, 20%);
+}
+
+.tooltip.active {
+  visibility: visible;
 }
