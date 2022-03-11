@@ -7,6 +7,7 @@
   width: 90%;
   max-width: 730px;
   overflow: hidden;
+
   @media (--sm) {
     flex-direction: row;
     overflow: visible;
@@ -18,7 +19,6 @@
   }
 }
 .left__panel img {
-  height: 100%;
   background-size: cover;
   width: auto;
   border-top-left-radius: 10px;
@@ -28,6 +28,7 @@
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     width: 100%;
+    height: 100%;
   }
 }
 .right__panel {
@@ -56,6 +57,9 @@
     height: 2rem;
     cursor: pointer;
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -96,7 +100,9 @@
     width: 2rem;
     height: 2rem;
     cursor: pointer;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (--sm) {
       display: none;
     }
